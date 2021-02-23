@@ -147,7 +147,7 @@ app.put("/game/:id",auth,(req, res) => {
     }
 });
 
-app.post("/auth",auth,(req, res) => {
+app.post("/auth",(req, res) => {
     var {email, password} = req.body;
     if(email != undefined) {
         var user = DB.users.find(u => u.email == email);
